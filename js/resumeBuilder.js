@@ -56,8 +56,8 @@ var bio = { "name": "Sam Crouch",
 
 
 	    }
-	    
-	    
+
+
 	  };
 
 var work = { "jobs":
@@ -84,7 +84,7 @@ var work = { "jobs":
 		     var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[index].dates);
 		     var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[index].location);
 		     var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[index].description);
-    
+
 		     $(".work-entry:last").append(formattedEmployer + formattedWorkTitle);
 		     $(".work-entry:last").append(formattedWorkDates);
 		     $(".work-entry:last").append(formattedWorkLocation);
@@ -143,8 +143,8 @@ var education = { "schools": [
 			  $(".education-entry:last").append(formattedSchoolMajor);
 		      }
 
-		      
-			  
+
+
 		      $("#education").append(HTMLonlineClasses);
 		      $("#education").append(HTMLschoolStart);
 		      for (var index = 0; index < education.onlineCourses.length; index++) {

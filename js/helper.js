@@ -112,13 +112,13 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  /* 
+  /*
   For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js. 
- */ 
+  appended to #mapDiv in resumeBuilder.js.
+ */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
-    
+
   /*
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
@@ -133,7 +133,7 @@ function initializeMap() {
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide: 
+    // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     education.schools.forEach(function(school){
       locations.push(school.location);
@@ -141,7 +141,7 @@ function initializeMap() {
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide: 
+    // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     work.jobs.forEach(function(job){
       locations.push(job.location);
@@ -153,7 +153,7 @@ function initializeMap() {
   createMapMarker(placeData) reads Google Places search results to create map pins.
   placeData is the object returned from search results containing information
   about a single location.
-*/  
+*/
   function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
@@ -193,7 +193,7 @@ function initializeMap() {
   /*
   callback(results, status) makes sure the search returned results for a location.
   If so, it creates a new map marker for that location.
-*/  
+*/
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
