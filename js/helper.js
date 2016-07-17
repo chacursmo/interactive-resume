@@ -103,20 +103,22 @@ var map;    // declares a global map variable
 Start here! initializeMap() is called when page is loaded.
 */
 function initializeMap() {
-
+/*
   var locations;
-
-  var mapOptions = {
+*/
+    var mapOptions = {
+	center: { lat: -34.397, lng: 150.644},
+	zoom: 8,
     disableDefaultUI: true
   };
 
   /* 
   For the map to be displayed, the googleMap var must be
   appended to #mapDiv in resumeBuilder.js. 
-  */
+ */ 
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
-
+    
   /*
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
@@ -144,7 +146,6 @@ function initializeMap() {
     work.jobs.forEach(function(job){
       locations.push(job.location);
     });
-
     return locations;
   }
 
@@ -152,7 +153,7 @@ function initializeMap() {
   createMapMarker(placeData) reads Google Places search results to create map pins.
   placeData is the object returned from search results containing information
   about a single location.
-  */
+*/  
   function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
@@ -177,7 +178,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+	infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -192,7 +193,7 @@ function initializeMap() {
   /*
   callback(results, status) makes sure the search returned results for a location.
   If so, it creates a new map marker for that location.
-  */
+*/  
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
@@ -218,7 +219,7 @@ function initializeMap() {
 
       // Actually searches the Google Maps API for location data and runs the callback
       // function with the search results after each search.
-  //    service.textSearch(request, callback);
+     service.textSearch(request, callback);
     });
   }
 
@@ -230,7 +231,7 @@ function initializeMap() {
 
   // pinPoster(locations) creates pins on the map for each location in
   // the locations array
- // pinPoster(locations);
+ pinPoster(locations);
 
 }
 
@@ -245,5 +246,5 @@ window.addEventListener('load', initializeMap);
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-  map.fitBounds(mapBounds);
+map.fitBounds(mapBounds);
 });
