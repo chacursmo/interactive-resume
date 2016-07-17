@@ -64,7 +64,7 @@ var work = {
 	"title": "Technology Facilitator",
 	"location": "Alvarado, Texas",
 	"dates" : "2005-2006",
-	"description": "Supported Two Campus' Adminitrators and"+
+	"description": "Supported Two Campus' Administrators and"+
 	    "Faculties within a mid-size school district in a rural"+
 	    "area. Developed scripts to maintain software"+
 	    "productivity. In concert with School Teachers"+
@@ -85,7 +85,7 @@ var work = {
 	for (var i = 0; i < work.jobs.length; i++) {
 	    $("#workExperience").append(HTMLworkStart);
 	    var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[i].employer);
-	    var formattedEmployerWorkTittle = HTMLworkTitle.replace("%data%",work.jobs[i].title);
+	    var formattedWorkTitle = HTMLworkTitle.replace("%data%",work.jobs[i].title);
 	    var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
 	    var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
 	    var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
@@ -172,7 +172,7 @@ var projects = {
 	    "cable, Performed final adjustments on operating systems.",
 	"images": ["/images/hmm.jpg"]
     },{
-	"title": "Open Source Content Managment System Web Site Conversion",
+	"title": "Open Source Content Management System Web Site Conversion",
 	"dates": "2006",
 	"description": "Surveyed and archived district"+
 	    "web site, installed LAMP software, debugged"+
