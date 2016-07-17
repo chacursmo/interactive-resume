@@ -126,7 +126,14 @@ var projects = { "ind_projects":
 		      "dates": "2006",
 		      "description": "Surveyed and archived district web site, installed LAMP software, debugged open source content management system, Named Joomla Jedi by coworkers.",
 		      "image": "/images/whoa.jpg"
-		  }]};
+		  },
+		  {
+		      "title": "Sentient Electronic Pet Rock",
+		      "dates": "2016 - Present",
+		      "description": "Using notion of a bicameral computer, reasoning aptitude for deep ideas, and learning from online electronic course: building the toy everyone desires to have, whom which is thinking.",
+		      "image": "/images/whoo.jpg"
+		  }
+		 ]};
 
 projects.display = function() {
     for (var index = 0; index < projects.ind_projects.length; index++) {
@@ -162,4 +169,46 @@ for (var i = 0; i < education.schools.length; i++){
     $(".education-entry:last").append(formattedSchoolMajor);
 };
 
+var onlineClasses = { "course" :
+		      [ { "title" : "Learning How to Learn: Powerful mental tools to help you master tough subjects",
+			  "school": "Coursera",
+			  "dates": "2015",
+			  "url": "www.coursera.org"
+			},
+			{ "title": "Machine Learning",
+			  "school": "Coursera",
+			  "dates": "2016",
+			  "url": "www.coursera.org"
+			},
+			{ "title": "Introduction to Programming with Java - Part 1: Starting to Program in Java",
+			  "school": "edX",
+			  "dates": "2015",
+			  "url": "www.edx.org"
+			},
+			{ "title": "Introduction to Computer Science and Programming Using Python",
+			  "school": "edX",
+			  "dates": "2016",
+			  "url": "www.edx.org"
+			}]};
+			  
+$(".education-entry:last").append(HTMLonlineClasses);
+
+for (var index = 0; index < onlineClasses.course.length; index++) {
+    var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",onlineClasses.course[index].title);
+    var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", onlineClasses.course[index].school);
+    $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
+    var formattedOnlineDates = HTMLonlineDates.replace("%data%", onlineClasses.course[index].dates);
+    $(".education-entry:last").append(formattedOnlineDates);
+    var formattedOnlineURL = HTMLonlineURL.replace("%data%", onlineClasses.course[index].url);
+    $(".education-entry:last").append(formattedOnlineURL);
+};
+
+
 $("#mapDiv").append(googleMap);
+
+
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
+$("#footerContacts").append(formattedTwitter);
+$("#footerContacts").append(formattedGithub);
+$("#footerContacts").append(formattedLocation);
