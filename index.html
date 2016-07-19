@@ -22,11 +22,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
 
   <!-- Load the page styles. -->
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet">
 
-  
+
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -49,7 +49,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+
+  <!--Used code from Google Developers site to add google map api -->
+  <script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD14h4ctjvC4Sr082KrFRDz5U8IZna3eIU&libraries=places&callback=initializeMap">
+  </script>
+
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -76,9 +82,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
-      <script async defer
-	      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD14h4ctjvC4Sr082KrFRDz5U8IZna3eIU&libraries=places&callback=initializeMap">
-      </script>
 
 
     </div>

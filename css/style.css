@@ -94,7 +94,7 @@ a {
 
 button {
     color: #0d48cd;
-    border-radius: 0px;
+    border-radius: 0;
 }
 .welcome-message {
   font-style: italic;
@@ -131,6 +131,8 @@ button {
   background-color: #4a4a4a;
 }
 
+/* This is a method I found on css-tricks to make the background image transparent */
+
 #header {
     position: relative;
 }
@@ -160,9 +162,10 @@ button {
   padding: 2.5% 5%;
 }
 
+
 #skills {
     display: list-item;
-    
+
 }
 
 ul {
