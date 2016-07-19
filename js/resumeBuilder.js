@@ -64,12 +64,12 @@ var work = {
 	"title": "Technology Facilitator",
 	"location": "Alvarado, Texas",
 	"dates" : "2005-2006",
-	"description": "Supported Two Campus' Administrators and"+
-	    "Faculties within a mid-size school district in a rural"+
-	    "area. Developed scripts to maintain software"+
-	    "productivity. In concert with School Teachers"+
-	    "generated STEM classroom content. Implemented"+
-	    "conversion of www.alvaradoisd.net web site into"+
+	"description": "Supported Two Campus' Administrators and "+
+	    "Faculties within a mid-size school district in a rural "+
+	    "area. Developed scripts to maintain software "+
+	    "productivity. In concert with School Teachers "+
+	    "generated STEM classroom content. Implemented "+
+	    "conversion of www.alvaradoisd.net web site into "+
 	    "open source content management system."
     },
      {
@@ -77,8 +77,8 @@ var work = {
 	 "title": "Tier Two Network Support",
 	 "location": "Southlake, Texas",
 	 "dates": "2012",
-	 "description": "Interpreted network data from customer"+
-	     "reported service interruptions and diagnosed proper"+
+	 "description": "Interpreted network data from customer "+
+	     "reported service interruptions and diagnosed proper "+
 	     "steps towards resolution."
      }],
     "display": function() {
@@ -113,7 +113,7 @@ var education = {
 	"url": "www.udacity.com"
     }],
     "onlineCourses": [{
-	"title" : "Learning How to Learn: Powerful"+
+	"title" : "Learning How to Learn: Powerful "+
 	    "mental tools to help you master tough subjects",
 	"school": "Coursera",
 	"dates": "2015",
@@ -124,13 +124,13 @@ var education = {
 	"dates": "2016",
 	"url": "www.coursera.org"
     },{
-	"title": "Introduction to Programming with Java"+
+	"title": "Introduction to Programming with Java "+
 	    "- Part 1: Starting to Program in Java",
 	"school": "edX",
 	"dates": "2015",
 	"url": "www.edx.org"
     },{
-	"title": "Introduction to Computer Science"+
+	"title": "Introduction to Computer Science "+
 	    "and Programming Using Python",
 	"school": "edX",
 	"dates": "2016",
@@ -165,27 +165,27 @@ var projects = {
     "projects": [{
 	"title": "Installation of Computer Labs",
 	"dates": "2005",
-	"description": "Unpacked newly purchased Dell"+
-	    "Desktop Computers, Installed appropriate"+
-	    "software, Transported Computers to School"+
-	    "Site, Ensured network connectivity with ethernet"+
+	"description": "Unpacked newly purchased Dell "+
+	    "Desktop Computers, Installed appropriate "+
+	    "software, Transported Computers to School "+
+	    "Site, Ensured network connectivity with ethernet "+
 	    "cable, Performed final adjustments on operating systems.",
 	"images": ["/images/hmm.jpg"]
     },{
 	"title": "Open Source Content Management System Web Site Conversion",
 	"dates": "2006",
-	"description": "Surveyed and archived district"+
-	    "web site, installed LAMP software, debugged"+
-	    "open source content management system, Named"+
+	"description": "Surveyed and archived district "+
+	    "web site, installed LAMP software, debugged "+
+	    "open source content management system, Named "+
 	    "Joomla Jedi by coworkers.",
 	"images": ["/images/whoa.jpg"]
     },{
 	"title": "Sentient Electronic Pet Rock",
 	"dates": "2016 - Present",
-	"description": "Using notion of a bicameral"+
-	    "computer, reasoning aptitude for deep ideas,"+
-	    "and learning from online electronic course:"+
-	    "building the toy everyone desires to have,"+
+	"description": "Using notion of a bicameral "+
+	    "computer, reasoning aptitude for deep ideas, "+
+	    "and learning from online electronic course: "+
+	    "building the toy everyone desires to have, "+
 	    "whom which is thinking.",
 	"images": ["/images/whoo.jpg"]
     }]};
@@ -199,7 +199,11 @@ projects.display = function() {
 	$(".project-entry:last").append(formattedProjectDates);
 	var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[index].description);
 	$(".project-entry:last").append(formattedProjectDescription);
-	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[index].images[0]);
+
+
+    }
+    for (var i = 0; i < projects.projects.length; i++){
+	var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[0]);
 	$(".project-entry:last").append(formattedProjectImage);
     }};
 

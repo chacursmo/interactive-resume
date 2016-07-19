@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", "Open Sans", sans-serif;
 }
 
 .clear-fix {
@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #21ce99;
   line-height: 48px;
   display: inline;
 }
@@ -86,12 +86,16 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #0d48cd;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
+button {
+    color: #0d48cd;
+    border-radius: 0px;
+}
 .welcome-message {
   font-style: italic;
   font-size: 18px;
@@ -100,16 +104,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #21ce99;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #21ce99;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #21ce99;
 }
 
 .white-text {
@@ -127,9 +131,20 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+    position: relative;
+}
+
+#header::after {
+    content: "";
+    background-image: url(/images/flag.jpg);
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .flex-box {
@@ -145,8 +160,13 @@ a {
   padding: 2.5% 5%;
 }
 
+#skills {
+    display: list-item;
+    
+}
+
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .biopic {
@@ -158,6 +178,8 @@ ul {
 
 img {
   padding: 10px;
+  width: 200px;
+  height: 200px;
 }
 
 span {
