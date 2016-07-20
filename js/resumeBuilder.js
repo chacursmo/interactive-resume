@@ -22,11 +22,11 @@ var bio = {
 	"Visual Design",
 	"C/Python Programming"
     ],
-    "bioPic": "/images/me.jpg",
+    "biopic": "images/me.jpg",
     "display": function() {
 	var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
 	var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
-	var formattedBioPic = HTMLbioPic.replace("%data%",bio.bioPic);
+	var formattedBioPic = HTMLbioPic.replace("%data%",bio.biopic);
 	$("#header").prepend(formattedHeaderRole);
 	$("#header").prepend(formattedHeaderName);
 	var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
@@ -170,7 +170,7 @@ var projects = {
 	    "software, Transported Computers to School "+
 	    "Site, Ensured network connectivity with ethernet "+
 	    "cable, Performed final adjustments on operating systems.",
-	"images": ["/images/hmm.jpg"]
+	"images": ["images/hmm.jpg"]
     },{
 	"title": "Open Source Content Management System Web Site Conversion",
 	"dates": "2006",
@@ -178,7 +178,7 @@ var projects = {
 	    "web site, installed LAMP software, debugged "+
 	    "open source content management system, Named "+
 	    "Joomla Jedi by coworkers.",
-	"images": ["/images/whoa.jpg"]
+	"images": ["images/whoa.jpg"]
     },{
 	"title": "Sentient Electronic Pet Rock",
 	"dates": "2016 - Present",
@@ -187,7 +187,7 @@ var projects = {
 	    "and learning from online electronic course: "+
 	    "building the toy everyone desires to have, "+
 	    "whom which is thinking.",
-	"images": ["/images/whoo.jpg"]
+	"images": ["images/whoo.jpg"]
     }]};
 
 projects.display = function() {

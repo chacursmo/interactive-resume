@@ -139,7 +139,7 @@ button {
 
 #header::after {
     content: "";
-    background-image: url(/images/flag.jpg);
+    background-image: url(images/flag.jpg);
     opacity: 0.75;
     top: 0;
     left: 0;
